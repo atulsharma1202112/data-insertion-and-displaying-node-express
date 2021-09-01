@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-size: 20px;
+    }
+
+    h2 {
+        text-align: center;
+        padding: 2vh 2vh 0 2vh;
+    }
+
+    .user-detail {
+        width: 25%;
+        margin-left: 38%;
+        margin-top: 03%;
+        border: 2px solid #f1f1f1;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item {
+        margin: 2vw;
+    }
+
+    input {
+        background-color: #f1f1f1;
+        outline: none;
+        border: none;
+        width: 20vw;
+        height: 5vh;
+        font-size: 14px;
+        padding: 2vh;
+        margin-top: 1vh;
+    }
+    
+    button {
+        width: 20vw;
+        height: 5vh;
+        border: none;
+        font-size: 20px;
+        color: #ffffff;
+        cursor: pointer;
+        background-color: #555452;
+    }
+
+    button:hover {
+        background-color: #7C7A78;
+    }
+</style>
+</head>
+<body>
+<!--====form section start====-->
+<div class="user-detail">
+    <h2>Create Student Data</h2>
+    <div class="form">
+        <form action="/users/create" method="POST">
+            <div class="item">
+                <label>Serial Number</label><br />
+                <input type="text" placeholder="Enter Serial Number" name="sno" required>
+            </div>
+            <div class="item">
+                <label>Name</label><br />
+                <input type="text" placeholder="Enter Full Name" name="Name" required>
+            </div>
+            <div class="item">
+                <label>Phone</label><br />
+                <input type="number" placeholder="Enter Phone Number" name="Phone" required>
+            </div>
+            <div class="item">
+                <label>Email</label><br />
+                <input type="email" placeholder="Enter Email" name="email" required>
+            </div>
+            <div class="item">
+                <label>Course</label><br />
+                <input type="text" placeholder="Enter Course" name="course" required>
+            </div>
+            <div class="item">
+                <button type="submit">Submit</button>
+            </div>  
+        </form>
+    </div>
+</div>
+<!--====form section end====-->
+</body>
+</html>

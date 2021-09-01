@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Fetch using MySQL and Node.js</title>
+  <style>
+      th {
+          padding: 1vh;
+      }
+      td {
+          padding: 2vh;
+          border: 2px solid #f1f1f1;
+          margin: 0;
+      }
+      table {
+          margin-left: 28%;
+          margin-top: 14%;
+          border: 2px solid #f1f1f1;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+      h2 {
+          margin: 2% 0 0 34%;
+      }
+  </style>
+</head>
+<body>
+    <div class="table-data">
+    <h2>Display Data using Node.js & MySQL</h2>
+    <table>
+        <tr>
+            <th>Serial Number</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email Address</th>
+            <th>Course</th>
+        </tr>
+        
+        <%
+        if(userData.length!=0){
+        var i=1;
+        userData.forEach(function(data){
+        %>
+        <tr>
+            <td><%=data.sno %></td>
+            <td><%=data.Name %></td>
+            <td><%=data.Phone %></td>
+            <td><%=data.email %></td>
+            <td><%=data.course %></td>
+        </tr>
+        <%  i++; }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="7">No Data Found</td>
+            </tr>
+        <% } %>
+    </table>
+    </div>
+</body>
+</html>
